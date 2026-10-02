@@ -42,6 +42,11 @@ static partial class Program
         {
             vitesseBalle.Y = -vitesseBalle.Y;
         }
+
+        if (positionBalle.Y <= LARGEUR)
+        {
+            vitesseBalle.Y = -vitesseBalle.Y;
+        }
     }
 
     /// <summary>Indique si la balle est entièrement sortie par le bas de la fenêtre.</summary>
