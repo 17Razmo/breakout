@@ -53,6 +53,8 @@ static partial class Program
     static void MettreAJourAttente(float dt)
     {
         DeplacerRaquette(dt);
+        CollerBalleARaquette();
+        LancerBalle();
     }
 
     /// <summary>Une image de jeu dans l'état Jeu.</summary>
