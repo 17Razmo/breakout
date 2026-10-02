@@ -26,11 +26,22 @@ static partial class Program
     /// <summary>Avance la balle selon sa vitesse.</summary>
     static void DeplacerBalle(float dt)
     {
+        positionBalle.X -= vitesseBalle.X * dt;
+        positionBalle.Y += vitesseBalle.Y * dt;
     }
 
     /// <summary>Fait rebondir la balle sur les murs gauche, droit et haut.</summary>
     static void RebondirSurMurs()
     {
+        if (positionBalle.X <= 0)
+        {
+            vitesseBalle.X = -vitesseBalle.X;
+        }
+
+        if (positionBalle.Y <= 0)
+        {
+            vitesseBalle.Y = -vitesseBalle.Y;
+        }
     }
 
     /// <summary>Indique si la balle est entièrement sortie par le bas de la fenêtre.</summary>
